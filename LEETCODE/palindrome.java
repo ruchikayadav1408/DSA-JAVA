@@ -1,3 +1,8 @@
+//https://leetcode.com/problems/palindrome-number/
+//Input: x = 121
+//Output: true
+
+
 import java.util.*;
 public class palindrome {
     public static boolean isPalindrome(int x) {
