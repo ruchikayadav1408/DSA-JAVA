@@ -29,7 +29,7 @@ static ArrayList<Integer> list= new ArrayList<>();
 
          return list.get(list.size()-1);
     }
-
+//print
     public static void main(String args[]){
         stack s=new stack();
         s.push(1);
