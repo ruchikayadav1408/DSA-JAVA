@@ -1,3 +1,5 @@
+//time complexity -O(2^n+m)
+
 public class gridways {
     public static int grid(int i, int j , int n, int m){
         //base case
