@@ -102,6 +102,43 @@ public class LinkedList {
         size--;
         return val;
     }
+    
+    //itertive search
+     public static int itrsearch(int key){  //O(n)
+        Node temp= head;
+        int i=0;
+        while(temp!= null){
+            if(temp.data==key){
+                return i;
+            }
+            temp=temp.next;
+            i++;
+
+        }
+        return -1;
+     }
+     //RECURSIVE SEARCH
+
+     public static int helper(Node head, int key){
+        if(head==null){
+            return -1;
+
+        }
+        if(head.data==key){
+            return 0;
+
+        }
+        int idx=helper(head.next, key);
+        if(idx==-1){
+            return -1;
+        }
+        return idx+1;
+
+     }
+     public static int recsearch(int key){
+        return helper(head, key);
+     }
+    
     public static void main(String args[]) {
         LinkedList ll= new LinkedList();
         ll.addfirst(2);
