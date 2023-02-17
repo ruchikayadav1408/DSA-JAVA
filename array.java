@@ -17,13 +17,14 @@ public class array{
               System.out.println("NOT found");
        }
     }
+    
   }
 return count;
   }
 
     public static void main(String args[]) {
 
-       int array[][] = { {4,6,8,5},{8,8,7,4} };
+       int array[][] = { {4,6,8,5,7},{8,8,7,4,4} };
        int key=8;
        System.out.println(search(array, key));
         
