@@ -138,7 +138,21 @@ public class LinkedList {
      public static int recsearch(int key){
         return helper(head, key);
      }
-    
+    //reverse A ll
+    public void reverse() {
+        Node prev= null;
+        Node curr=tail=head;
+        Node next;
+
+        while(curr!= null){
+            next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+        }
+        head=prev;
+        
+     }
     public static void main(String args[]) {
         LinkedList ll= new LinkedList();
         ll.addfirst(2);
