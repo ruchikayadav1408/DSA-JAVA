@@ -180,6 +180,46 @@ public class LinkedList {
 
       }
     
+     //LL IS PALINDROME
+      public static Node findmid(Node head){
+            Node  slow= head;
+            Node fast=head;
+            while(fast !=null && fast.next!=null){
+                slow=slow.next;//+1
+                fast=fast.next.next;//+2
+            }
+            return slow;
+      }
+    
+      public static boolean palindrome(){
+        if(head==null || head.next==null){
+            return true;
+        }
+        //find mid
+        Node midNode= findmid(head);
+        //reverse 2nd half ll
+        Node prev=null;
+        Node curr=midNode;
+        Node next;
+         while(curr != null){
+            next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+         }
+        //check 1st half=2nd half
+        Node left= head;
+        Node right= prev;
+        while(right!=null){
+            if(left.data!=right.data){
+                return false;
+            }
+            left=left.next;
+            right=right.next;
+        }
+        return true;
+      }
+    
     public static void main(String args[]) {
         LinkedList ll= new LinkedList();
         ll.addfirst(2);
