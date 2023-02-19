@@ -14,7 +14,7 @@ public class LinkedList {
     public static Node tail;
     public static int size;
 
-    
+//ADD FIRST    
     public  void addfirst(int data) {
         // step -1 CREATE NEW NODE
        Node NewNode = new Node(data);
@@ -30,6 +30,7 @@ public class LinkedList {
         head=NewNode;
         
     }
+    //ADD LAST
     public void addLast(int data){
          Node newNode = new Node(data);
          size++;
@@ -39,7 +40,9 @@ public class LinkedList {
          } 
          tail.next=newNode;
          tail=newNode;
-    }
+    } 
+    
+    //PRINT
     public void print(){
         if(head==null){
             System.out.println("LL IS EMPTY");
@@ -153,6 +156,30 @@ public class LinkedList {
         head=prev;
         
      }
+    
+     //remove Nth node from end
+      public void removeNthnode(int n){
+        int sz=0;
+        Node temp= head;
+        while(temp != null){
+            temp=temp.next;
+            sz++;
+        }
+        if(n==sz){
+            head= head.next;
+        }
+        int i=1;
+        int iTofind= sz-n;
+        Node prev= head;
+        while(i<iTofind){
+            prev=prev.next;
+            i++;
+        }
+        prev.next=prev.next.next;
+        return;
+
+      }
+    
     public static void main(String args[]) {
         LinkedList ll= new LinkedList();
         ll.addfirst(2);
