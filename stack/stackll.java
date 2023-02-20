@@ -47,6 +47,7 @@ public class stackll {
     return head.data;
    }
   }
+ //run 
 
   public static void main(String args[]){
     stack s=new stack();
