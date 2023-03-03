@@ -16,6 +16,8 @@ public class gridways {
         int totalways=w1+w2;
         return totalways;
     }
+    
+    
     public static void main(String args[]){
         int n=3, m=3;
         System.out.println(grid(0,0, n,m));
