@@ -14,6 +14,7 @@ public class nqueens {
             return false;
         }
     }
+        
         //diagonal right up
         for(int i=row-1, j=col+1; i>=0 && j<board.length; i--, j++){
             if(board[i][j]=='Q'){
