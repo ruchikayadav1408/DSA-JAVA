@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class containerwithmostwater {
     public static int storewater(ArrayList<Integer> height){
+        
         //brute force
         int maxwater =0;
         for(int i=0;i<height.size();i++){
