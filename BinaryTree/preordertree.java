@@ -1,5 +1,5 @@
 import java.util.*;
-public class preordertree {
+public class preordertree {   
     static class Node{
         int data;
          Node left;
@@ -27,8 +27,8 @@ public class preordertree {
               return newnode;
         }
            
-
-           public static void traverse(Node root){
+         // preorder  NLR :  N- NODE , L - LEFT , R- RIGHT 
+           public static void traverse(Node root){   
             if(root== null){
               return ;
             }
@@ -38,7 +38,7 @@ public class preordertree {
 
            }
          
-          // inorder travsere
+          // inorder travsere  - LNR
            public static void  inorder (Node root) {
              if(root == null){
               return;
@@ -49,7 +49,7 @@ public class preordertree {
             
            }
          
-           //post order
+           //post order  - LRN
            public static void postorder(Node root) {
             if(root== null){
               return;
